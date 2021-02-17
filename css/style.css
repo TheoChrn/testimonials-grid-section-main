@@ -1,7 +1,168 @@
 /* UTILS */
 /* BASE */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  align-items: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: #ecf2f8;
+}
+body a, body li {
+  list-style: none;
+  text-decoration: none;
+}
+body main {
+  max-width: 1024px;
+  margin: auto;
+}
+body main .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+body main .attribution a {
+  color: #3e52a3;
+}
+
+@media all and (min-width: 1024px) {
+  body main {
+    grid-template-rows: repeat(3, 1fr);
+    display: grid;
+    max-width: 1440px;
+    height: 100vh;
+    margin: auto;
+    align-self: center;
+  }
+}
 /* COMPONENTS */
 /* LAYOUT */
 /* PAGES */
+#sec1 {
+  width: 90%;
+  padding: 30px 0;
+  margin: auto;
+  display: grid;
+  grid-row-gap: 20px;
+}
+#sec1 .item {
+  position: relative;
+  display: grid;
+  grid-row-gap: 20px;
+  padding: 25px;
+  border-radius: 10px;
+}
+#sec1 .item:nth-child(1) .item__name, #sec1 .item:nth-child(1) .item__title, #sec1 .item:nth-child(1) .item__quote, #sec1 .item:nth-child(1) .item__verified, #sec1 .item:nth-child(2) .item__name, #sec1 .item:nth-child(2) .item__title, #sec1 .item:nth-child(2) .item__quote, #sec1 .item:nth-child(2) .item__verified, #sec1 .item:nth-child(4) .item__name, #sec1 .item:nth-child(4) .item__title, #sec1 .item:nth-child(4) .item__quote, #sec1 .item:nth-child(4) .item__verified {
+  color: white;
+}
+#sec1 .item:nth-child(1) {
+  background-color: #7541c8;
+}
+#sec1 .item:nth-child(1) img {
+  border-color: #a07dd9;
+}
+#sec1 .item:nth-child(2) {
+  background-color: #48556a;
+}
+#sec1 .item:nth-child(2) img {
+  border: none;
+}
+#sec1 .item:nth-child(4) {
+  background-color: #19212e;
+}
+#sec1 .item:nth-child(4) img {
+  border-color: #7541c8;
+}
+#sec1 .item:nth-child(2n+3) {
+  background-color: white;
+}
+#sec1 .item:nth-child(2n+3) .item__name, #sec1 .item:nth-child(2n+3) .item__title, #sec1 .item:nth-child(2n+3) .item__quote .item__verified {
+  color: #48556a;
+}
+#sec1 .item svg {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 115px;
+  height: auto;
+}
+#sec1 .item__identity {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+#sec1 .item__identity img {
+  height: auto;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+#sec1 .item__info {
+  display: grid;
+  grid-template-rows: 15px;
+}
+#sec1 .item__verified {
+  font-size: 12px;
+  opacity: 0.5;
+}
+#sec1 .item__title {
+  font-weight: 600;
+  font-size: 22px;
+  z-index: 1;
+}
+#sec1 .item__quote {
+  font-size: 15px;
+  opacity: 0.7;
+  line-height: 20px;
+}
+
+@media all and (min-width: 1024px) {
+  #sec1 {
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    min-height: inherit;
+    margin: auto;
+    grid-row: 2/3;
+  }
+  #sec1 .item {
+    padding: 35px;
+    grid-row-gap: 20px;
+  }
+  #sec1 .item:nth-child(1) {
+    grid-column: 1/span 6;
+  }
+  #sec1 .item:nth-child(2) {
+    grid-column: 7/span 3;
+  }
+  #sec1 .item:nth-child(3) {
+    grid-column: 1/span 3;
+    grid-row-start: 2;
+  }
+  #sec1 .item:nth-child(3) .item__title {
+    width: 90%;
+  }
+  #sec1 .item:nth-child(4) {
+    grid-column: 4/span 6;
+  }
+  #sec1 .item:nth-child(5) {
+    grid-row: 1/span 2;
+    grid-column: 10/span 3;
+  }
+  #sec1 .item svg {
+    right: 93px;
+    width: 128px;
+    height: auto;
+  }
+  #sec1 .item__title {
+    font-size: 24px;
+  }
+  #sec1 .item__quote {
+    font-size: 16px;
+  }
+
+  .attribution {
+    grid-row: 3/3;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
